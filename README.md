@@ -1,2 +1,3 @@
 # python-market-project
-Beginner Python project focused on logic and data handling, simulating a small market system with product registration and total calculation.
+A beginner Python project focused on logic and data handling.
+This program simulates a small supermarket system where users can select products, calculate the total amount, and choose different payment methods with discounts or interest
