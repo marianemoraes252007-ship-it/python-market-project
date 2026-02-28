@@ -1,2 +1,2 @@
 # python-market-project
-Begginer Python project created to simulate a small market system with product registration and total calculation.
+Beginner Python project focused on logic and data handling, simulating a small market system with product registration and total calculation.
