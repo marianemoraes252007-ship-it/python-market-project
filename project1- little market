@@ -7,7 +7,7 @@ total = 0
 cart = []
 
 pen = 2.90
-cake = 20.00
+cake = 15.00
 meat = 35.90
 pizza = 21.99
 candy = 5.50
@@ -20,10 +20,10 @@ if product1 == "YES":
     cart.append("Pen")
     print("Product successfully added!")
 
-product2 = input("Do you want a Panettone - $20.00? ").strip().upper()
+product2 = input("Do you want a Cake - $15.00? ").strip().upper()
 if product2 == "YES":
     total += cake
-    cart.append("Panettone")
+    cart.append("Cake")
     print("Product successfully added!")
 
 product3 = input("Do you want Meat - $35.90? ").strip().upper()
@@ -64,32 +64,32 @@ print("(2) Credit/Debit card (full payment) -> 5% DISCOUNT")
 print("(3) 2 installments on card -> NO DISCOUNT")
 print("(4) 3 or more installments on card -> 20% INTEREST")
 
-payment_method = input("Choose the payment method: ").strip()
+paymentMethod = input("Choose the payment method: ").strip()
 
-while not payment_method.isnumeric() or int(payment_method) not in [1, 2, 3, 4]:
+while not paymentMethod.isnumeric() or int(paymentMethod) not in [1, 2, 3, 4]:
     print("Please choose a valid option (1 to 4).")
-    payment_method = input("Choose the payment method: ").strip()
+    paymentMethod = input("Choose the payment method: ").strip()
 
-payment_method = int(payment_method)
+paymentMethod = int(paymentMethod)
 
-if payment_method == 1:
-    final_total = total * 0.90
-    print(f"Final amount with discount: ${final_total:.2f}")
+if paymentMethod == 1:
+    finalTotal = total * 0.90
+    print(f"Final amount with discount: ${finalTotal:.2f}")
 
-elif payment_method == 2:
-    final_total = total * 0.95
-    print(f"Final amount with discount: ${final_total:.2f}")
+elif paymentMethod == 2:
+    finalTotal = total * 0.95
+    print(f"Final amount with discount: ${finalTotal:.2f}")
 
-elif payment_method == 3:
-    final_total = total
-    installment = final_total / 2
+elif paymentMethod == 3:
+    finalTotal = total
+    installment = finalTotal / 2
     print(f"It will be 2 installments of ${installment:.2f}")
 
-elif payment_method == 4:
+elif paymentMethod == 4:
     installments = int(input("Number of installments: "))
-    final_total = total * 1.20
-    installment_value = final_total / installments
-    print(f"It will be {installments} installments of ${installment_value:.2f}")
+    finalTotal = total * 1.20
+    installmentValue = finalTotal / installments
+    print(f"It will be {installments} installments of ${installmentValue:.2f}")
 
 # Processing
 
