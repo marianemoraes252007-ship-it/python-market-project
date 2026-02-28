@@ -55,7 +55,8 @@ else:
         print("-", item)
 
 print(f"Subtotal: ${total:.2f}")
-
+if len(cart) == 0:
+    print("You must select at least one product.")
 # Payment
 
 print("\nPayment methods:")
