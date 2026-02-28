@@ -6,27 +6,27 @@ print("Here are the available products!")
 total = 0
 cart = []
 
-pen = 7.90
-panettone = 34.90
-meat = 49.90
+pen = 2.90
+cake = 20.00
+meat = 35.90
 pizza = 21.99
-candy = 10.50
+candy = 5.50
 
 # Product selection
 
-product1 = input("Do you want a Pen - $7.90? ").strip().upper()
+product1 = input("Do you want a Pen - $2.90? ").strip().upper()
 if product1 == "YES":
     total += pen
     cart.append("Pen")
     print("Product successfully added!")
 
-product2 = input("Do you want a Panettone - $34.90? ").strip().upper()
+product2 = input("Do you want a Panettone - $20.00? ").strip().upper()
 if product2 == "YES":
-    total += panettone
+    total += cake
     cart.append("Panettone")
     print("Product successfully added!")
 
-product3 = input("Do you want Meat - $49.90? ").strip().upper()
+product3 = input("Do you want Meat - $35.90? ").strip().upper()
 if product3 == "YES":
     total += meat
     cart.append("Meat")
@@ -38,7 +38,7 @@ if product4 == "YES":
     cart.append("Pizza")
     print("Product successfully added!")
 
-product5 = input("Do you want Candy - $10.50? ").strip().upper()
+product5 = input("Do you want Candy - $5.50? ").strip().upper()
 if product5 == "YES":
     total += candy
     cart.append("Candy")
