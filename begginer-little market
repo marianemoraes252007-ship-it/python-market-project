@@ -1,0 +1,101 @@
+import time
+
+print("Welcome to Python's Supermarket!!!")
+print("Here are the available products!")
+
+total = 0
+cart = []
+
+pen = 7.90
+panettone = 34.90
+meat = 49.90
+pizza = 21.99
+candy = 10.50
+
+# Product selection
+
+product1 = input("Do you want a Pen - $7.90? ").strip().upper()
+if product1 == "YES":
+    total += pen
+    cart.append("Pen")
+    print("Product successfully added!")
+
+product2 = input("Do you want a Panettone - $34.90? ").strip().upper()
+if product2 == "YES":
+    total += panettone
+    cart.append("Panettone")
+    print("Product successfully added!")
+
+product3 = input("Do you want Meat - $49.90? ").strip().upper()
+if product3 == "YES":
+    total += meat
+    cart.append("Meat")
+    print("Product successfully added!")
+
+product4 = input("Do you want Pizza - $21.99? ").strip().upper()
+if product4 == "YES":
+    total += pizza
+    cart.append("Pizza")
+    print("Product successfully added!")
+
+product5 = input("Do you want Candy - $10.50? ").strip().upper()
+if product5 == "YES":
+    total += candy
+    cart.append("Candy")
+    print("Product successfully added!")
+
+# Purchase summary
+
+print("\n========== PURCHASE SUMMARY ==========")
+
+if len(cart) == 0:
+    print("No products were selected.")
+else:
+    for item in cart:
+        print("-", item)
+
+print(f"Subtotal: ${total:.2f}")
+
+# Payment
+
+print("\nPayment methods:")
+print("(1) Cash or check -> 10% DISCOUNT")
+print("(2) Credit/Debit card (full payment) -> 5% DISCOUNT")
+print("(3) 2 installments on card -> NO DISCOUNT")
+print("(4) 3 or more installments on card -> 20% INTEREST")
+
+payment_method = input("Choose the payment method: ").strip()
+
+while not payment_method.isnumeric() or int(payment_method) not in [1, 2, 3, 4]:
+    print("Please choose a valid option (1 to 4).")
+    payment_method = input("Choose the payment method: ").strip()
+
+payment_method = int(payment_method)
+
+if payment_method == 1:
+    final_total = total * 0.90
+    print(f"Final amount with discount: ${final_total:.2f}")
+
+elif payment_method == 2:
+    final_total = total * 0.95
+    print(f"Final amount with discount: ${final_total:.2f}")
+
+elif payment_method == 3:
+    final_total = total
+    installment = final_total / 2
+    print(f"It will be 2 installments of ${installment:.2f}")
+
+elif payment_method == 4:
+    installments = int(input("Number of installments: "))
+    final_total = total * 1.20
+    installment_value = final_total / installments
+    print(f"It will be {installments} installments of ${installment_value:.2f}")
+
+# Processing
+
+print("\nProcessing payment...")
+time.sleep(3)
+
+print("Payment completed successfully!!!")
+print("Thank you for your preference!!!")
+print("Come back soon!!!")
