@@ -1,0 +1,50 @@
+def system_loop():
+
+    n1 = float(input("Enter the first value: "))
+    n2 = float(input("Enter the second value: "))
+
+    print("Menu:")
+
+    response = 0
+
+    while response != 5:
+
+        print("""
+    [1] Add
+    [2] Multiply
+    [3] Greater number
+    [4] New numbers
+    [5] Exit
+        """)
+
+        response = int(input("Which option do you want? -> "))
+
+        if response == 1:
+            total = n1 + n2
+            print(f"{n1} + {n2} = {total}")
+
+        elif response == 2:
+            multiplication = n1 * n2
+            print(f"{n1} x {n2} = {multiplication}")
+
+        elif response == 3:
+            if n1 > n2:
+                print(f"{n1} is greater than {n2}")
+            elif n2 > n1:
+                print(f"{n2} is greater than {n1}")
+            else:
+                print("Both numbers are equal")
+
+        elif response == 4:
+            n1 = float(input("Enter the first value: "))
+            n2 = float(input("Enter the second value: "))
+
+        elif response == 5:
+            print("Finishing...")
+            import time
+            time.sleep(3)
+
+    print("End of program!")
+
+
+system_loop()
